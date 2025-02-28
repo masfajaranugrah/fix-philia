@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/pages/api/visitor.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/pages/api/visitor.js", "src/components/common/Wahana/Cards.tsx", "src/components/common/Wahana/hook/use-outside-click.js"],
   "exclude": ["node_modules"]
 }

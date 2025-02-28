@@ -21,7 +21,7 @@ const _Group = () => {
         }}
       >
         <motion.h1
-          className="text-[40px] font-[1000] text-center text-[#2D210A]"
+          className="text-[24px] xl:text-[40px] md:text-[30px] font-[1000] text-center text-[#2D210A]"
           variants={{
             hidden: { opacity: 0, y: -20 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
@@ -31,13 +31,13 @@ const _Group = () => {
         </motion.h1>
 
         <motion.p
-          className="font-bold text-center text-[20px] text-[#2D210A] pb-4 xl:text-[25px] lg:text-[25px] md:text-[25px]"
+          className="font-bold py-2 text-center md:text-2x1 xl:text-[1.5rem] text-[15px] mx-2 text-[#2D210A] pb-4 xl:text-[25px] lg:text-[25px]  "
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
           }}
         >
-          Rasakan kebersamaan yang tak terlupakan bersama kami!
+          Rasakan kebersamaan yang tak  <br/> terlupakan bersama kami!
         </motion.p>
       </motion.div>
 
@@ -62,7 +62,7 @@ const _Group = () => {
       </motion.div>
 
       <motion.p
-        className="font-semibold text-justify px-8 container xl:text-center md:text-center lg:text-center text-[17px] text-[#2D210A] xl:text-[25px] lg:text-[25px] md:text-[25px] mt-10"
+        className="font-semibold text-justify   md:text-2x1 xl:text-[1.5rem] px-[3rem] container xl:text-center md:text-center lg:text-center text-[15px] text-[#2D210A]   lg:text-[25px]   mt-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}

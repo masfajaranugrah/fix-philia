@@ -4,9 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+* {
   font-family: "Montserrat", serif;
-
  }
 
  .fc-h-event {
@@ -328,4 +327,64 @@ img{
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, #388E3C, #689F38); /* Warna saat hover */
+}
+/* Hilangkan scrollbar di semua browser */
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.custom-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.fc-toolbar-title {
+  font-weight: bold;
+  text-align: center;
+  padding: 0 20px;
+  font-size: 15px !important;
+  text-transform: uppercase;
+}
+
+.fc-toolbar-title {
+  font-weight: bold;
+  text-align: center;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-size: 14px !important; /* Default untuk mobile */
+}
+
+.fc-col-header{
+  background-color: #0E3F23;
+  color: white;
+  padding: 20px;
+}
+/* Memberikan border-radius ke keseluruhan kalender */
+.fc-theme-standard .fc-scrollgrid {
+  border-radius: 10px;
+  overflow: hidden; /* Mencegah isi keluar */
+}
+
+/* Memberikan border-radius ke setiap sel kalender */
+.fc-daygrid-day {
+  border-radius: 5px; /* Sesuaikan sesuai kebutuhan */
+}
+
+/* Memberikan border-radius ke header kalender */
+.fc-toolbar {
+  border-radius: 10px 10px 0 0;
+}
+
+/* Untuk tablet (lebar 600px ke atas) */
+@media (min-width: 600px) {
+  .fc-toolbar-title {
+    font-size: 16px !important;
+  }
+}
+
+/* Untuk desktop (lebar 1024px ke atas) */
+@media (min-width: 1024px) {
+  .fc-toolbar-title {
+    font-size: 40px !important;
+  }
 }

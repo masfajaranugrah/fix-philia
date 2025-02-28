@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function Banner() {
   return (
-    <section className="xl:mx-[40px] md:mx-[40px] lg:mx-[40px] mb-20   relative mt-[20px] lg:mt-[33px] xl:mt-[33px] sm:mt-[20px] md:mt-20 md:px-0 lg:px-0 xl:px-0 px-4">
+    <section className="  xl:mx-0 md:px-[40px]  lg:mx-[40px] rounded-[20px] relative mt-[10rem] lg:mt-[9rem] px-4 md:px-0">
       <motion.div
         className="relative overflow-hidden rounded-[20px] rounded  bg-cover bg-no-repeat text-center h-[329px] sm:h-[400px] md:h-[300px] xl:h-[400px] lg:h-[800px]"
         style={{

@@ -44,11 +44,11 @@ const CalendarEvent = () => {
   };
 
   return (
-    <div className="container mx-auto min-h-screen p-4 md:p-6 flex bg-blur flex-col gap-6">
-      <h1 className="text-[20px]  md:text-[40px] text-[#2D210A] lg:text-[40px] font-[1000] text-center">
+    <div className="container mx-auto min-h-screen z-10 p-6 md:p-6 flex bg-blur flex-col gap-6">
+      <h1 className="text-[24px]  md:text-[40px] text-[#2D210A] lg:text-[40px] font-[1000] text-center">
         Kalender acara
       </h1>
-      <div className="rounded-xl shadow-[8px_8px_0px_#0A2D19] bg-[#F6FFEA] p-3 md:p-4">
+      <div className="rounded-xl shadow-[8px_8px_0px_#0A2D19] bg-[#F6FFEA] p-5 md:p-4">
        
           <FullCalendar
             plugins={[dayGridPlugin]}
@@ -79,7 +79,7 @@ const CalendarEvent = () => {
       </div>
 
       {selectedEvent && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm z-[9999]">
+        <div className="fixed inset-0  flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm z-[9999]">
           <div className="bg-[#F6FFEA] p-6 rounded-lg  max-w-md w-full">
             <h2 className="text-xl font-bold text-[#2D210A] mb-2">
               {selectedEvent.title}
@@ -176,9 +176,9 @@ const CalendarEvent = () => {
         </div>
       )}
       {/* Event List */}
-      <div className="rounded-xl  bg-[#F6FFEA] shadow-[8px_8px_0px_#0A2D19] p-4">
+      <div className="rounded-xl z-10 custom-scrollbar relative bg-[#F6FFEA] shadow-[8px_8px_0px_#0A2D19] p-4">
         <h4 className="text-lg font-extrabold text-[#2D210A] mb-4">Daftar Acara</h4>
-        <div className="flex flex-col gap-4 max-h-80 overflow-y-auto">
+        <div className="flex flex-col gap-4 max-h-80 custom-scrollbar overflow-y-auto">
           {events.length > 0 ? (
             events.map((event, index) => {
               const currentDate = new Date();

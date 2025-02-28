@@ -25,12 +25,12 @@ const According = () => {
   return (
     <div className="mt-20 relative">
       <div>
-        <h1 className="text-[30px]  md:text-[40px] xl:text-[40px] font-[1000] text-[#2D210A] text-center mb-10">Apa yang ingin kamu tahu?</h1>
+        <h1 className="text-[24px]  md:text-[40px] xl:text-[40px] font-[1000] text-[#2D210A] text-center mb-10">Apa yang ingin kamu tahu?</h1>
       </div>
 
-      <div className="container mx-auto relative z-10 xl:pb-[80rem] md:pb-[40rem] pb-[30rem] lg:pb-[50rem] md:px-[2rem] lg:px-[10rem] xl:px-[10rem] px-[1rem]">
+      <div className="container mx-auto  relative z-10 xl:pb-[80rem] md:pb-[40rem] pb-[30rem] lg:pb-[50rem] md:px-[2rem] lg:px-[10rem] xl:px-[10rem] px-[1rem]">
         {question.length > 0 ? (
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full px-3">
             {question.map((item, index) => (
               <motion.div
                 key={item.id_question}
@@ -43,10 +43,15 @@ const According = () => {
                   ease: "easeOut",
                 }}
               >
-                <AccordionItem value={item.id_question.toString()}>
-                  <AccordionTrigger className="text-[#2D210A]">{item.pertanyaan}</AccordionTrigger>
-                  <AccordionContent>{item.jawaban}</AccordionContent>
+                <AccordionItem className="text-red" value={item.id_question.toString()}>
+                  <AccordionTrigger className="text-[#2D210A] hover:text-[#553800] group-hover:text-[#8B5A2B] transition-colors duration-300">
+                    {item.pertanyaan}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700 group-hover:text-[#3E3729] flex  items-center text-white font-bold transition-colors duration-300">
+                    {item.jawaban}
+                  </AccordionContent>
                 </AccordionItem>
+               
               </motion.div>
             ))}
           </Accordion>

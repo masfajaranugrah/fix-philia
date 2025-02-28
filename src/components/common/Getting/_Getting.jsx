@@ -12,7 +12,7 @@ const _Getting = () => {
     >
       <div>
         <motion.h1
-          className="text-[40px] font-[1000] text-center text-[#2D210A] "
+          className="text-[24px] mdLtext-[30px] lg:text-[40px] xl:text-[47px] font-[1000] text-center text-[#2D210A] "
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8, ease: "easeInOut" }}
@@ -21,16 +21,16 @@ const _Getting = () => {
         </motion.h1>
 
         <motion.p
-          className="font-bold text-center text-[20px] text-[#2D210A]  xl:text-[30px] lg:text-[30px] md:text-[30px] mt-10"
+          className="font-bold text-center text-[15px] text-[#2D210A]  xl:text-[30px] lg:text-[30px] md:text-[30px] mt-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8, ease: "easeInOut" }}
         >
-          Monday - Sunday : 00.00 - 00.00 | Last Entry : 19.00
+          Senin - Minggu : 08.00 - 17.00 | Tutup : 19.00
         </motion.p>
 
         <motion.h2
-          className="font-[1000] text-[30px] my-10 text-center text-[#2D210A] "
+          className="font-[1000] text-[24px] md:text-[30px] my-10 xl:text-[47px] text-center text-[#2D210A] "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8, ease: "easeInOut" }}
@@ -38,9 +38,8 @@ const _Getting = () => {
 TEMUKAN KAMI DISINI      
  </motion.h2>
       </div>
-
       <motion.div
-        className="w-full px-[2rem] flex justify-center"
+        className="w-full px-[1.5rem] xl:px-[1.6rem] lg:px-[1.6rem] md:px-[1rem] flex justify-center"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.8, duration: 0.8, ease: "easeInOut" }}>

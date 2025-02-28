@@ -4,27 +4,36 @@ import { InfiniteMovingCards } from "../../ui/infinite-moving-cards";
 
 export default function People() {
   return (
-    <div className="w-full mx-auto  mb-10 rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
-      <div className="text-center">
+<div className="w-full  mx-auto ">
+<div className="px-[1.5rem] md:px-[4rem] lg:px-16 xl:px-24">
+              <div className="text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
-          className="  text-center text-[30px]  md:text-[40px] xl:text-[40px] text-[#2D210A]    font-[Montserrat] font-[1000] my-10"
+          className="  text-center text-[24px]  md:text-[40px] xl:text-[40px] text-[#2D210A]    font-[Montserrat] font-[1000] my-10"
         >
           KESERUAN PHILIA
         </motion.p>
       </div>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        <InfiniteMovingCards   items={testimonials} direction="right" speed="slow" />
-      </motion.div>
+  initial={{ opacity: 0, scale: 0.8 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.8, delay: 0.3 }}
+  
+>
+  <InfiniteMovingCards 
+    className="rounded-lg"
+    items={testimonials}
+    direction="right"
+    speed="slow"
+  />
+</motion.div>
+      </div>
+
     </div>
   );
 }

@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Card = () => {
+
   return (
     <div className="relative mt-20">
       {/* Title Animation */}
@@ -29,7 +30,7 @@ const Card = () => {
           {/* Weekdays Card */}
           <motion.div
             className="p-6 border border-green-900 bg-[#F6FFEA] rounded-[20px] rounded shadow-[8px_8px_0px_#0A2D19]"
-            whileHover={{ scale: 1.05, boxShadow: "8px 8px 15px rgba(0, 0, 0, 0.2)" }}
+            whileHover={{ scale: 1.05, boxShadow: "8px 8px 0px #0A2D19" }}
             whileTap={{ scale: 0.95 }}
           >
             <h3 className="text-[40px] font-[1000] text-center text-[#2D210A]  mb-1">HARI KERJA</h3>
@@ -41,7 +42,7 @@ const Card = () => {
           {/* Weekend Card */}
           <motion.div
             className="p-6 border border-green-900 rounded-[20px] rounded shadow-[8px_8px_0px_#0A2D19] bg-[#F6FFEA]"
-            whileHover={{ scale: 1.05, boxShadow: "8px 8px 15px rgba(0, 0, 0, 0.2)" }}
+            whileHover={{ scale: 1.05, boxShadow: "8px 8px 0px #0A2D19" }}
             whileTap={{ scale: 0.95 }}
           >
             <h3 className="text-[40px] font-[1000] text-center text-[#2D210A]  mb-1">HARI LIBUR</h3>
@@ -65,13 +66,17 @@ const Card = () => {
             <p className="text-[30px] font-bold text-[#2D210A] ">sekarang!</p>
           </div>
 
-          <motion.button
+           <a href="/wahana"> 
+          
+<motion.button
             className="px-6 my-4 py-4 text-[30px] font-[1000] text-white bg-[#2D210A]  rounded-[20px] "
             whileHover={{ scale: 1.05, backgroundColor: "#2D210A" }}
             whileTap={{ scale: 0.95 }}
           >
             WAHANA TIKET
           </motion.button>
+</a>
+      
         </motion.div>
       </div>
 

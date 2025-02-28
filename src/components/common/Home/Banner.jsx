@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function Banner() {
   return (
-    <section className="  xl:mx-[40px] lg:mx-[40px] rounded-[20px] relative mt-5 lg:mt-8 px-4 md:px-0">
+    <section className=" xl:px-0 md:px-[40px]  lg:mx-[40px] rounded-[20px] relative mt-[10rem] lg:mt-[9rem] px-4 md:px-0">
       {/* Background muncul dulu */}
       <motion.div
         initial={{ opacity: 0 }}

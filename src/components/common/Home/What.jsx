@@ -47,13 +47,13 @@ function What() {
    
   return (
     <motion.div initial="hidden" animate="visible" className="container mx-auto flex flex-col items-center">
-      <motion.p className="text-center text-[30px]  md:text-[40px] xl:text-[40px] text-[#2D210A] px-2 font-[Montserrat] font-[1000] my-10">
+      <motion.p className="text-center text-[24px]  md:text-[40px] xl:text-[40px] text-[#2D210A] px-2 font-[Montserrat] font-[1000] my-10">
       ADA APA DI PHILIA HARI INI
       </motion.p>
 
-      <motion.div className="relative w-full container mx-auto px-8">
+      <motion.div className="relative w-full container mx-20 px-5">
         {/* Tombol Navigasi */}
-        <motion.button ref={prevRef} className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-[#2D210A] rounded p-2 text-white hover:bg-opacity-75 z-10">
+        <motion.button ref={prevRef} className="absolute left-2 xl:left-0 top-1/2 transform -translate-y-1/2 bg-[#2D210A] rounded p-2 text-white hover:bg-opacity-75 z-10">
           <ChevronLeft size={40} />
         </motion.button>
 
@@ -87,7 +87,7 @@ function What() {
         )}
 
         {/* Tombol Navigasi */}
-        <motion.button ref={nextRef} className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#2D210A] rounded p-2 text-white hover:bg-opacity-75 z-10">
+        <motion.button ref={nextRef} className="absolute right-2 xl:right-0 top-1/2 transform -translate-y-1/2 bg-[#2D210A] rounded p-2 text-white hover:bg-opacity-75 z-10">
           <ChevronRight size={40} />
         </motion.button>
       </motion.div>

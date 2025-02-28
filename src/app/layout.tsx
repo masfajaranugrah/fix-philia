@@ -1,22 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 import dotenv from "dotenv";
 
 dotenv.config();
+
 export const metadata: Metadata = {
   title: "Philia Adventure Land - Destinasi Wisata & Petualangan Terbaik",
   description:
@@ -62,7 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@philia",
-    creator: "@philia", // Jika akun Twitter tersedia
+    creator: "@philia",
     title: "PHILIA ADVENTURE LAND | menawarkan pengalaman berpetualang",
     description:
       "Sebuah destinasi petualangan yang menawarkan pengalaman tak terlupakan bagi Anda...",
@@ -71,40 +61,36 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="id">
       <head>
-        
-      <Script id="schema-markup" type="application/ld+json">
-  {JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Philia Adventure Land",
-    url: "https://philiadventureland.com",
-    logo: "https://philiadventureland.com/images/banner/logo-share.png",
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+62 812-4318-318",
-      contactType: "customer service",
-      areaServed: "ID",
-      availableLanguage: "Indonesian",
-    },
-    sameAs: [
-      "https://www.facebook.com/philiaadventure",
-      "https://www.twitter.com/philiaadventure",
-      "https://www.instagram.com/philiaadventure",
-    ],
-  })}
-</Script>
-
+        <link rel="icon" href="favicon.ico" />
+        <Script id="schema-markup" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Philia Adventure Land",
+            url: "https://philiadventureland.com",
+            logo: "https://philiadventureland.com/images/banner/logo-share.png",
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+62 812-4318-318",
+              contactType: "customer service",
+              areaServed: "ID",
+              availableLanguage: "Indonesian",
+            },
+            sameAs: [
+              "https://www.facebook.com/philiaadventure",
+              "https://www.twitter.com/philiaadventure",
+              "https://www.instagram.com/philiadventureland",
+            ],
+          })}
+        </Script>
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} text-black antialiased bg-[#bddca9]`}
-      >
+      <body className="text-black antialiased bg-gradient-to-b from-[#F6FFEA] to-[#ADD296]">
         <Navbar />
         <main>{children}</main>
         <Footer />
